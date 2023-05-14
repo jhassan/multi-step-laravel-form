@@ -57,4 +57,14 @@ class Job extends Model
     {
         return $this->hasOne(EnglishProficiency::class, 'id');
     }
+
+    public function CountryOfResidence(): HasOne
+    {
+        return $this->hasOne(Country::class, 'id');
+    }
+
+    public function CountryOfCitizenship(): HasOne
+    {
+        return $this->hasOne(CountryCitizenship::class, 'id');
+    }
 }

@@ -7,7 +7,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
-                                <a href="index.html" style="color: #0dcaf0; border: 2px solid #ba895d; padding: 10px 40px; border-radius: 8px; font-size: 20px;">AccBrains</a>
+                                <a href="/" style="color: #0dcaf0; border: 2px solid #ba895d; padding: 10px 40px; border-radius: 8px; font-size: 20px;">AccBrains</a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10">

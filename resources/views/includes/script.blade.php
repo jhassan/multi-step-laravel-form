@@ -83,6 +83,22 @@
             }, 200);
         }
 
+        $(document).on('change', 'select',function(){
+            var value = $(this).val();
+            if(value){
+                $(this).removeClass("invalid");
+            } else {
+                $(this).addClass("invalid");
+            }
+        });    
+        $(document).on('blur', 'input',function(){
+            var value = $(this).val();
+            if(value){
+                $(this).removeClass("invalid");
+            } else {
+                $(this).addClass("invalid");
+            }
+        });
         $(document).on('blur', '#email',function(){
             var error_email = '';
             var email = $('#email').val();

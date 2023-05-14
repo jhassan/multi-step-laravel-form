@@ -45,14 +45,17 @@ class JobController extends CrudController
 	public function show($item)
 	{
 		$item = $this->resolveItem($item);
-
+        // echo "<pre>";
+        // print_r($item); die;
         $item->role = $item->getRole->name;
         $item->years = $item->year->name;
         $item->primary_skill = $item->getPrimarySkill->name;
         $item->years_of_experience = $item->getYearsOfExperience->name;
         $item->english_proficiency = $item->getEnglishProficiency->name;
+        $item->country_of_residence = $item->CountryOfResidence->nicename;
+        $item->country_of_citizenship = $item->CountryOfCitizenship->nicename;
 
-        unset($item->getRole, $item->year, $item->getPrimarySkill, $item->getYearsOfExperience, $item->getEnglishProficiency);
+        unset($item->getRole, $item->year, $item->getPrimarySkill, $item->getYearsOfExperience, $item->getEnglishProficiency, $item->CountryOfResidence, $item->CountryOfCitizenship);
 
 		return view("{$this->view_base}.details", $this->view_data(['item' => $item, 'type' => 'details']));
 	}
