@@ -35,4 +35,25 @@ class JobController extends CrudController
 
         return $this->extraActions([$view], $item);
     }
+
+    /**
+	 * Display the specified resource.
+	 *
+	 * @param  string|int  $item
+	 * @return \Illuminate\Http\Response
+	 */
+	public function show($item)
+	{
+		$item = $this->resolveItem($item);
+
+        $item->role = $item->getRole->name;
+        $item->years = $item->year->name;
+        $item->primary_skill = $item->getPrimarySkill->name;
+        $item->years_of_experience = $item->getYearsOfExperience->name;
+        $item->english_proficiency = $item->getEnglishProficiency->name;
+
+        unset($item->getRole, $item->year, $item->getPrimarySkill, $item->getYearsOfExperience, $item->getEnglishProficiency);
+
+		return view("{$this->view_base}.details", $this->view_data(['item' => $item, 'type' => 'details']));
+	}
 }

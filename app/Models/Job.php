@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Job extends Model
 {
@@ -27,6 +28,33 @@ class Job extends Model
         'expected_salary',
         'name',
         'email',
-        'phone'
+        'phone',
+        'highest_education',
+        'application_for'
     ];
+
+    public function getRole(): HasOne
+    {
+        return $this->hasOne(Role::class, 'id');
+    }
+
+    public function year(): HasOne
+    {
+        return $this->hasOne(TotalYearsOfWorkExperience::class, 'id');
+    }
+
+    public function getPrimarySkill(): HasOne
+    {
+        return $this->hasOne(PrimarySkill::class, 'id');
+    }
+
+    public function getYearsOfExperience(): HasOne
+    {
+        return $this->hasOne(YearsOfExperienceWithPrimarySkill::class, 'id');
+    }
+
+    public function getEnglishProficiency(): HasOne
+    {
+        return $this->hasOne(EnglishProficiency::class, 'id');
+    }
 }

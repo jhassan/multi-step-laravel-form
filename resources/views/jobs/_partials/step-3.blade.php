@@ -5,8 +5,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="section-tittle-one mb-25">
-                        <h3 class="title font-size-25 heading-color-two"> Relocation
-                        </h3>
+                        <h3 class="title font-size-25 heading-color-two"> Relocation </h3>
                         <p>Please share details about your relocation plans</p>
                     </div>
                 </div>
@@ -15,64 +14,45 @@
             <div class="row mb-30">
                 <h6 style="margin-bottom:1%;">Would you like to relocate ?</h6>
                 <div class="col-lg-12 col-sm-12">
-
                     <div class="check-wrap style-eight mb-10">
-                        <input id="8" type="radio" name="like_to_relocate" checked="radio" value="1">
+                        <input id="8" type="radio" name="like_to_relocate" checked="radio" value="Yes, I am interested to relocate">
                         <label for="8">Yes, I am interested to relocate</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="9" type="radio" name="like_to_relocate" value="2">
-                        <label for="9">No, but would consider
-                            remote & onsite opportunities in my Residence country
-                        </label>
+                        <input id="9" type="radio" name="like_to_relocate" value="No, but would consider remote & onsite opportunities in my Residence country">
+                        <label for="9">No, but would consider remote & onsite opportunities in my Residence country</label>
                     </div>
-
-
                 </div>
-
-                <h6 style="margin-bottom:1%;margin-top:3%;">Please choose the
-                    countries , you would like to relocate</h6>
+                <h6 style="margin-bottom:1%;margin-top:3%;">Please choose the countries , you would like to relocate</h6>
                 <div class="col-lg-4 col-sm-12">
-
                     <div class="check-wrap style-eight mb-10">
-                        <input id="10" type="radio" name="relocate_countries" checked="radio" value="1">
+                        <input id="10" type="radio" name="relocate_countries" checked="radio" value="United States">
                         <label for="10">United States</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="11" type="radio" name="relocate_countries" value="2">
-                        <label for="11">United Arab Emirates
-                        </label>
+                        <input id="11" type="radio" name="relocate_countries" value="United Arab Emirates">
+                        <label for="11">United Arab Emirates</label>
                     </div>
-
-
                 </div>
                 <div class="col-lg-4 col-sm-12">
-
                     <div class="check-wrap style-eight mb-10">
-                        <input id="12" type="radio" name="relocate_countries" value="3">
+                        <input id="12" type="radio" name="relocate_countries" value="United Kingdom">
                         <label for="12">United Kingdom</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="13" type="radio" name="relocate_countries" value="4">
-                        <label for="13">Germany
-                        </label>
+                        <input id="13" type="radio" name="relocate_countries" value="Germany">
+                        <label for="13">Germany</label>
                     </div>
-
-
                 </div>
                 <div class="col-lg-4 col-sm-12">
-
                     <div class="check-wrap style-eight mb-10">
-                        <input id="14" type="radio" name="relocate_countries" value="5">
+                        <input id="14" type="radio" name="relocate_countries" value="Canada">
                         <label for="14">Canada</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="15" type="radio" name="relocate_countries" value="6">
-                        <label for="15">China
-                        </label>
+                        <input id="15" type="radio" name="relocate_countries" value="China">
+                        <label for="15">China</label>
                     </div>
-
-
                 </div>
                 <div style="margin-top:5%;"></div>
                 <div class="col-lg-6 col-md-12">
@@ -84,7 +64,6 @@
                                 <option value="{{$country->id}}">{{$country->nicename}}</option>
                             @endforeach
                         </select>
-
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -98,9 +77,7 @@
                         </select>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
     <!-- /Form -->

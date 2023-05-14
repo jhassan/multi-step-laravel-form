@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Job Email</title>
 </head>
 <body>
-    Here is email content
+    {{ info($data) }}
 </body>
 </html>

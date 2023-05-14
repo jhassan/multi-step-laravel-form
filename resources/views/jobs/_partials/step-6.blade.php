@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="alert alert-success" id="show-message">
-                        Loading...
+                        Please wait, email is sending ...
                     </div>
                     <div class="section-tittle-one text-center mb-25 d-none" id="success-box">
                         <!-- Check Mark icon -->
