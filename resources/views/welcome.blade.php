@@ -852,7 +852,7 @@
             if (valid) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
             }
-            return true; // return the valid status
+            return valid; // return the valid status
         }
         function fixStepIndicator(n) {
             // This function removes the "active" class of all steps...

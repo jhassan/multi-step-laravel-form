@@ -18,8 +18,5 @@ Route::get('/sample', function () {
     return view('sample');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/', [JobsController::class, 'index']);
+Route::post('/jobs', [JobsController::class, 'store'])->name('jobs.store');
