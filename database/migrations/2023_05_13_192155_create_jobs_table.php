@@ -28,6 +28,8 @@ return new class extends Migration
             $table->string('country_of_citizenship');
             $table->string('current_salary');
             $table->string('expected_salary');
+            $table->string('application_for');
+            $table->string('highest_education');
             $table->string('name');
             $table->string('email');
             $table->string('phone');

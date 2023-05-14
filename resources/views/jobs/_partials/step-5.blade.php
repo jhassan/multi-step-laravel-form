@@ -35,12 +35,12 @@
             <div class="col-lg-6 col-md-12">
                 <label class="label-title">Highest Education</label>
                 <div class="input-form">
-                    <select class="form-control">
+                    <select class="form-control" name="highest_education">
                         <option value="">Select Highest Education</option>
-                        <option>PHD</option>
-                        <option>Masters</option>
-                        <option>Bachelors</option>
-                        <option>High School</option>
+                        <option value="PHD">PHD</option>
+                        <option value="Masters">Masters</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="High School">High School</option>
                     </select>
                 </div>
             </div>

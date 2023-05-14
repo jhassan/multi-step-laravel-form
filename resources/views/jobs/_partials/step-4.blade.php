@@ -27,52 +27,37 @@
             </div>
 
 
-            <h5 style="margin-top:2%;margin-bottom:2%;">Please select whats
-                applicable to you</h5>
+            <h5 style="margin-top:2%;margin-bottom:2%;">Please select whats applicable to you</h5>
             <br>
             <div class="col-lg-4 col-sm-12">
                 <div class="check-wrap style-eight mb-10">
-                    <input id="16" type="radio" value="1" checked="radio" >
+                    <input id="16" type="radio" name="application_for" value="Worked as a freelancer" checked="radio" >
                     <label for="16">Worked as a freelancer</label>
                 </div>
-
                 <div class="check-wrap style-eight mb-10">
-                    <input id="17" type="radio" value="2">
-                    <label for="17">Worked in a Startup
-                    </label>
+                    <input id="17" type="radio" name="application_for" value="Worked in a Startup">
+                    <label for="17">Worked in a Startup</label>
                 </div>
-
-
-
-
             </div>
-
             <div class="col-lg-4 col-sm-12">
                 <div class="check-wrap style-eight mb-10">
-                    <input id="18" type="radio" value="3">
+                    <input id="18" type="radio" name="application_for" value="I love Audits">
                     <label for="18">I love Audits</label>
                 </div>
-
                 <div class="check-wrap style-eight mb-10">
-                    <input id="19" type="radio" value="4">
-                    <label for="19">I mostly worked in a Team
-                    </label>
+                    <input id="19" type="radio" name="application_for" value="I mostly worked in a Team">
+                    <label for="19">I mostly worked in a Team</label>
                 </div>
-
-
             </div>
-
-
             <div class="col-lg-4 col-sm-12">
                 <div class="check-wrap style-eight mb-10">
-                    <input id="20" type="radio" value="5">
+                    <input id="20" type="radio" name="application_for" value="I mostly worked Individually">
                     <label for="20">I mostly worked Individually</label>
                 </div>
 
                 <div class="check-wrap style-eight mb-10">
-                    <input id="21" type="radio" value="6">
-                    <label for="21">I do freelance Projects
-                    </label>
+                    <input id="21" type="radio" name="application_for" value="I do freelance Projects">
+                    <label for="21">I do freelance Projects</label>
                 </div>
 
 
