@@ -23,6 +23,7 @@
                 <label class="label-title">Email</label>
                 <div class="input-form">
                     <input type="email" name="email" id="email" placeholder="Email">
+                    <span id="error_email" style="margin-bottom: 10px;"></span>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">

@@ -14,17 +14,16 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        $roles = [
+        $roles = 
             [
                 'Audit Controller',
                 'CF',
                 'Tax Controller',
             ]
-        ];
-
-        DB::truncate('roles');
-        foreach($roles as $role) {
-            Role::create($role);
+        ;
+        DB::table("roles")->truncate();
+        foreach($roles as $key => $role) {
+            Role::create(['name' => $role]);
         }
     }
 }

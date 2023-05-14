@@ -56,5 +56,10 @@
         #jobForm input.invalid, select.invalid {
             background-color: #f1e4e4;
         }
+        .has-error
+        {
+            border-color:#cc0000;
+            background-color:#ffff99;
+        }
     </style>
 </head>

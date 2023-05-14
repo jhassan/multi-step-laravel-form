@@ -57,28 +57,19 @@
                 // if you have reached the end of the form...
                 if (currentTab >= (x.length - 1)) {
                     // ... the form gets submitted:
-                    // Check Email
-                    var email = document.getElementById("email");    
-                    var email_status = checkEmail(email);  
-                    if(!email_status){
-                        // document.getElementById("jobForm").submit();
-                        $.ajax( {
-                            dataType: 'json',
-                            url:"{{ route('jobs.store') }}",
-                            method: 'POST',
-                            data: {'data': $("#jobForm").serializeArray()},
-                            success: function ( response ) {
-                                if(response.status == 1){
-                                    $('#show-message').addClass('d-none');
-                                    $('#success-box').removeClass('d-none');
-                                }
+                    // document.getElementById("jobForm").submit();
+                    $.ajax( {
+                        dataType: 'json',
+                        url:"{{ route('jobs.store') }}",
+                        method: 'POST',
+                        data: {'data': $("#jobForm").serializeArray()},
+                        success: function ( response ) {
+                            if(response.status == 1){
+                                $('#show-message').addClass('d-none');
+                                $('#success-box').removeClass('d-none');
                             }
-                        });
-                    } else {
-                        alert("Invalid Email");
-                        return false;
-                    }
-                    
+                        }
+                    });
                 }
                 
                 // Otherwise, display the correct tab:
@@ -91,10 +82,43 @@
                 }
             }, 200);
         }
-        function checkEmail(email){
-            var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
-            return pattern.test(email) ? true : false;
-        }
+
+        $(document).on('blur', '#email',function(){
+            var error_email = '';
+            var email = $('#email').val();
+            var _token = $('input[name="_token"]').val();
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(!filter.test(email))
+            {    
+                $('#error_email').html('<label class="text-danger">Invalid Email</label>');
+                $('#email').addClass('has-error');
+                $('#register').attr('disabled', 'disabled');
+            }
+            else
+            {
+                $.ajax({
+                    url:"{{ route('jobs.check_email') }}",
+                    method:"POST",
+                    data:{email:email, _token:_token},
+                    success:function(result)
+                    {
+                        if(result == 'unique')
+                        {
+                            $('#error_email').html('<label class="text-success">Email Available</label>');
+                            $('#email').removeClass('has-error');
+                            $('#nextBtn').attr('disabled', false);
+                        }
+                        else
+                        {
+                            $('#error_email').html('<label class="text-danger">Email not Available</label>');
+                            $('#email').addClass('has-error');
+                            $('#nextBtn').attr('disabled', 'disabled');
+                        }
+                    }
+                })
+            }
+        });
+
         function validateForm() {
             // This function deals with validation of the form fields
             var x, y, i, valid = true;

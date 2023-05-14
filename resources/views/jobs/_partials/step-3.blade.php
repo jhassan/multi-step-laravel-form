@@ -80,7 +80,9 @@
                     <div class="input-form">
                         <select class="form-control" name="country_of_residence">
                             <option value="">Country of Residence</option>
-                            <option>United Arab Emirates</option>
+                            @foreach($countries as $country)
+                                <option value="{{$country->id}}">{{$country->nicename}}</option>
+                            @endforeach
                         </select>
 
                     </div>
@@ -90,7 +92,9 @@
                     <div class="input-form">
                         <select class="form-control" name="country_of_citizenship">
                         <option value="">Country of Citizenship</option>
-                            <option>United Arab Emirates</option>
+                            @foreach($countries as $country)
+                                <option value="{{$country->id}}">{{$country->nicename}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

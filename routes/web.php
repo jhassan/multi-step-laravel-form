@@ -20,3 +20,4 @@ Route::get('/sample', function () {
 
 Route::get('/', [JobsController::class, 'index']);
 Route::post('/jobs', [JobsController::class, 'store'])->name('jobs.store');
+Route::post('/check_email', [JobsController::class, 'check_email'])->name('jobs.check_email');
