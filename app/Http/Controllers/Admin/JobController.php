@@ -25,6 +25,16 @@ class JobController extends CrudController
         ['data' => 'actions', 'name' => 'actions', 'width' => '25%'],
     ];
 
+    /**
+	 * Get Create Link Data
+	 *
+	 * @return array
+	 */
+	protected function getCreateLinkData()
+	{
+		return [];
+	}
+
     public function form_fields($item = null){
         return [];
     }
@@ -45,8 +55,7 @@ class JobController extends CrudController
 	public function show($item)
 	{
 		$item = $this->resolveItem($item);
-        // echo "<pre>";
-        // print_r($item); die;
+
         $item->role = $item->getRole->name;
         $item->years = $item->year->name;
         $item->primary_skill = $item->getPrimarySkill->name;

@@ -35,36 +35,36 @@ class Job extends Model
 
     public function getRole(): HasOne
     {
-        return $this->hasOne(Role::class, 'id');
+        return $this->hasOne(Role::class, 'id', 'role');
     }
 
     public function year(): HasOne
     {
-        return $this->hasOne(TotalYearsOfWorkExperience::class, 'id');
+        return $this->hasOne(TotalYearsOfWorkExperience::class, 'id', 'years');
     }
 
     public function getPrimarySkill(): HasOne
     {
-        return $this->hasOne(PrimarySkill::class, 'id');
+        return $this->hasOne(PrimarySkill::class, 'id', 'primary_skill');
     }
 
     public function getYearsOfExperience(): HasOne
     {
-        return $this->hasOne(YearsOfExperienceWithPrimarySkill::class, 'id');
+        return $this->hasOne(YearsOfExperienceWithPrimarySkill::class, 'id', 'years_of_experience');
     }
 
     public function getEnglishProficiency(): HasOne
     {
-        return $this->hasOne(EnglishProficiency::class, 'id');
+        return $this->hasOne(EnglishProficiency::class, 'id', 'english_proficiency');
     }
 
     public function CountryOfResidence(): HasOne
     {
-        return $this->hasOne(Country::class, 'id');
+        return $this->hasOne(Country::class, 'id', 'country_of_residence');
     }
 
     public function CountryOfCitizenship(): HasOne
     {
-        return $this->hasOne(CountryCitizenship::class, 'id');
+        return $this->hasOne(Country::class, 'id', 'country_of_citizenship');
     }
 }
