@@ -5,7 +5,7 @@
             <span class="user-status">{{ auth()->user()->role ?? '' }}</span>
         </div>
         <span>
-            <img class="round" src="{{ auth()->user()->avatar_url ?? '' }}" alt="avatar" height="40" width="40">
+            <img class="round" src="{{ auth()->user()->avatar_url ?? '/assets/img/logo/logo.png' }}" alt="avatar" height="40" width="40">
         </span>
     </a>
     <div class="dropdown-menu dropdown-menu-right">

@@ -34,7 +34,7 @@ $(document).ready(function() {
     pageLength: 4,
     buttons: [
       {
-        text: "<i class='feather icon-plus'></i> Add New",
+        text: "<i class='feather icon-plus'></i> Add New3333",
         action: function() {
           $(this).removeClass("btn-secondary")
           $(".add-new-data").addClass("show")
@@ -83,7 +83,7 @@ $(document).ready(function() {
     pageLength: 4,
     buttons: [
       {
-        text: "<i class='feather icon-plus'></i> Add New",
+        text: "<i class='feather icon-plus'></i> Add New99999",
         action: function() {
           $(this).removeClass("btn-secondary")
           $(".add-new-data").addClass("show")

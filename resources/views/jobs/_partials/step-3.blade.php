@@ -11,7 +11,7 @@
                 </div>
             </div>
             <!-- Check Box -->
-            <div class="row mb-30">
+            <div class="row mb-30" id="yyy">
                 <h6 style="margin-bottom:1%;">Would you like to relocate ?</h6>
                 <div class="col-lg-12 col-sm-12">
                     <div class="check-wrap style-eight mb-10">
@@ -23,35 +23,35 @@
                         <label for="9">No, but would consider remote & onsite opportunities in my Residence country</label>
                     </div>
                 </div>
-                <h6 style="margin-bottom:1%;margin-top:3%;">Please choose the countries , you would like to relocate</h6>
+                <h6 style="margin-bottom:1%;margin-top:3%;">Please choose the countries , you would like to relocate <span id="error_relocate_countries" style="display: none; color: red; font-weight: bold;" class="red">(Required!)</span> </h6>
                 <div class="col-lg-4 col-sm-12">
                     <div class="check-wrap style-eight mb-10">
-                        <input id="10" type="radio" name="relocate_countries" checked="radio" value="United States">
-                        <label for="10">United States</label>
+                        <input id="relocate_countries_10" type="checkbox" name="relocate_countries[]" class="check_id" value="United States" onclick="checkTotalCheckedBoxes()" checked>
+                        <label for="relocate_countries_10">United States</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="11" type="radio" name="relocate_countries" value="United Arab Emirates">
-                        <label for="11">United Arab Emirates</label>
+                        <input id="relocate_countries_11" type="checkbox" name="relocate_countries[]" class="check_id" value="United Arab Emirates" onclick="checkTotalCheckedBoxes()">
+                        <label for="relocate_countries_11">United Arab Emirates</label>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12">
                     <div class="check-wrap style-eight mb-10">
-                        <input id="12" type="radio" name="relocate_countries" value="United Kingdom">
-                        <label for="12">United Kingdom</label>
+                        <input id="relocate_countries_12" type="checkbox" name="relocate_countries[]" class="check_id" value="United Kingdom" onclick="checkTotalCheckedBoxes()">
+                        <label for="relocate_countries_12">United Kingdom</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="13" type="radio" name="relocate_countries" value="Germany">
-                        <label for="13">Germany</label>
+                        <input id="relocate_countries_13" type="checkbox" name="relocate_countries[]" class="check_id" value="Germany" onclick="checkTotalCheckedBoxes()">
+                        <label for="relocate_countries_13">Germany</label>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12">
                     <div class="check-wrap style-eight mb-10">
-                        <input id="14" type="radio" name="relocate_countries" value="Canada">
-                        <label for="14">Canada</label>
+                        <input id="relocate_countries_14" type="checkbox" name="relocate_countries[]" class="check_id" value="Canada" onclick="checkTotalCheckedBoxes()">
+                        <label for="relocate_countries_14">Canada</label>
                     </div>
                     <div class="check-wrap style-eight mb-10">
-                        <input id="15" type="radio" name="relocate_countries" value="China">
-                        <label for="15">China</label>
+                        <input id="relocate_countries_15" type="checkbox" name="relocate_countries[]" class="check_id" value="China" onclick="checkTotalCheckedBoxes()">
+                        <label for="relocate_countries_15">China</label>
                     </div>
                 </div>
                 <div style="margin-top:5%;"></div>

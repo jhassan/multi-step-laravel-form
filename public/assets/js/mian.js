@@ -85,6 +85,9 @@
             }
         });
         $(document).on('click', '#prevBtn', function() {
+            $("#nextBtn").prop('disabled', false);
+            $("#error_relocate_countries").hide();
+            $("#application_for").hide();
             if (currents > 0) {
                 currents--
             }

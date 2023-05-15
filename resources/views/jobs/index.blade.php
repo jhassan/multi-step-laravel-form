@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="jobForm" action="{{ route('jobs.store') }}" method="post">
+                    <form id="jobForm" name="jobForm" action="{{ route('jobs.store') }}" method="post">
                         @csrf
                         <div class="account-area">
                             <div class="multiStep-wrapper multiStep-top-border multiStep-bottom-border">

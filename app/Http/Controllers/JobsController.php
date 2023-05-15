@@ -41,13 +41,27 @@ class JobsController extends Controller
 
     public function store(Request $request)
     {
+        $relocate_countries = "";
+        $application_for = "";
         foreach($request->data as $field) {
             if($field['name'] == "_token") {
                 continue;
             }
+            if($field['name'] == 'relocate_countries[]') {
+                $relocate_countries .= $field['value'].", ";
+            }
+            if($field['name'] == 'application_for[]') {
+                $application_for .= $field['value'].", ";
+            }
             $inputs[$field['name']] = $field['value'];
         }
+        $relocate_countries = rtrim($relocate_countries, ", ");
+        $inputs['relocate_countries'] = $relocate_countries; 
+        
+        $application_for = rtrim($application_for, ", ");
+        $inputs['application_for'] = $application_for; 
 
+        // dd($inputs);
         Job::create($inputs);
         
         // Mail::to($inputs['email'])->send(new JobEmail($inputs));

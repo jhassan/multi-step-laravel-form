@@ -27,36 +27,36 @@
             </div>
 
 
-            <h5 style="margin-top:2%;margin-bottom:2%;">Please select whats applicable to you</h5>
+            <h5 style="margin-top:2%;margin-bottom:2%;">Please select whats applicable to you <span id="application_for" style="display: none; color: red; font-weight: bold;" class="red">(Required!)</span></h5>
             <br>
             <div class="col-lg-4 col-sm-12">
                 <div class="check-wrap style-eight mb-10">
-                    <input id="16" type="radio" name="application_for" value="Worked as a freelancer" checked="radio" >
+                    <input id="16" type="checkbox" name="application_for[]" class="check_id2" onclick="checkTotalCheckedBoxes2()" value="Worked as a freelancer" checked>
                     <label for="16">Worked as a freelancer</label>
                 </div>
                 <div class="check-wrap style-eight mb-10">
-                    <input id="17" type="radio" name="application_for" value="Worked in a Startup">
+                    <input id="17" type="checkbox" name="application_for[]" class="check_id2" onclick="checkTotalCheckedBoxes2()" value="Worked in a Startup">
                     <label for="17">Worked in a Startup</label>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-12">
                 <div class="check-wrap style-eight mb-10">
-                    <input id="18" type="radio" name="application_for" value="I love Audits">
+                    <input id="18" type="checkbox" name="application_for[]" class="check_id2" onclick="checkTotalCheckedBoxes2()" value="I love Audits">
                     <label for="18">I love Audits</label>
                 </div>
                 <div class="check-wrap style-eight mb-10">
-                    <input id="19" type="radio" name="application_for" value="I mostly worked in a Team">
+                    <input id="19" type="checkbox" name="application_for[]" class="check_id2" onclick="checkTotalCheckedBoxes2()" value="I mostly worked in a Team">
                     <label for="19">I mostly worked in a Team</label>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-12">
                 <div class="check-wrap style-eight mb-10">
-                    <input id="20" type="radio" name="application_for" value="I mostly worked Individually">
+                    <input id="20" type="checkbox" name="application_for[]" class="check_id2" onclick="checkTotalCheckedBoxes2()" value="I mostly worked Individually">
                     <label for="20">I mostly worked Individually</label>
                 </div>
 
                 <div class="check-wrap style-eight mb-10">
-                    <input id="21" type="radio" name="application_for" value="I do freelance Projects">
+                    <input id="21" type="checkbox" name="application_for[]" class="check_id2" onclick="checkTotalCheckedBoxes2()" value="I do freelance Projects">
                     <label for="21">I do freelance Projects</label>
                 </div>
 

@@ -10,7 +10,7 @@ return [
 
 	'pages' => [
 		'login' => [
-			'logo' => '/images/logo.png'
+			'logo' => '/assets/img/logo/logo.png'
 		]
 	],
 

@@ -138,17 +138,32 @@
         function validateForm() {
             // This function deals with validation of the form fields
             var x, y, i, valid = true;
+            // var count = 0;
             x = document.getElementsByClassName("multiStep-form");
             y = x[currentTab].getElementsByTagName("input");
             // A loop that checks every input field in the current tab:
             for (i = 0; i < y.length; i++) {
                 // If a field is empty...
+                // console.log("y[i]", y[i].type);
                 if (y[i].value == "") {
-                // add an "invalid" class to the field:
-                y[i].className += " invalid";
-                // and set the current valid status to false
-                valid = false;
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
                 }
+                // if(y[i].type === "checkbox" && !y[i].checked) {
+                //     //  count++;
+                //     //  valid = (count == 0) ? false : true;   
+                //     // y[i].className += " invalid";
+                //     // and set the current valid status to false
+                //     valid = false;
+                //     console.log("block");
+                //     document.getElementById("error_relocate_countries").style.display = 'block';
+                // } else {
+                //     console.log("none");
+                //     document.getElementById("error_relocate_countries").style.display = 'none';
+                // }
+
             }
             z = x[currentTab].getElementsByTagName("select");
             // A loop that checks every input field in the current tab:
@@ -156,14 +171,38 @@
                 for (i = 0; i < z.length; i++) {
                     // If a field is empty...
                     if (z[i].value == "") {
-                    // add an "invalid" class to the field:
-                    z[i].className += " invalid";
-                    // and set the current valid status to false
-                    valid = false;
+                        // add an "invalid" class to the field:
+                        z[i].className += " invalid";
+                        // and set the current valid status to false
+                        valid = false;
                     }
                 }
             }
+
+            // var checkbox = x[currentTab].getElementsByTagName("input[name='relocate_countries[]']:checked"),
+            //     i,
+            //     checked;
+            //     console.log("checkbox.length", checkbox.length);
+            //     console.log("checkbox", checkbox);
+            // console.log("countss", $(":checkbox:checked").length);
+            // if(document.jobForm.elements['relocate_countries[]'].length > 0){
+            //     var success = false;
+            //     for (i = 0; i < document.jobForm.elements['relocate_countries[]'].length; i++){
+            //         if (document.jobForm.elements['relocate_countries[]'][i].checked){
+            //             success = true;
+            //         }
+            //     }
+            //     valid = success;
+            // }
+            // console.log("currentTab", currentTab);
+            // if(currentTab == 2){
+            //     if($(":checkbox:checked").length == 0){
+            //         valid = false;
+            //     }
+            // }
             
+            
+            console.log("valid", valid);
             // If the valid status is true, mark the step as finished and valid:
             if (valid) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
@@ -178,6 +217,30 @@
             }
             //... and adds the "active" class on the current step:
             x[n].className += " active";
+        }
+        function checkTotalCheckedBoxes()
+        {
+            var checkLength = $(".check_id:checked").length;
+            console.log("checkLength", checkLength);
+            if(checkLength == 0){
+                $("#nextBtn").prop('disabled', true);
+                $("#error_relocate_countries").show();
+            } else {
+                $("#nextBtn").prop('disabled', false);
+                $("#error_relocate_countries").hide();
+            }
+        }
+        function checkTotalCheckedBoxes2()
+        {
+            var checkLength = $(".check_id2:checked").length;
+            console.log("checkLength", checkLength);
+            if(checkLength == 0){
+                $("#nextBtn").prop('disabled', true);
+                $("#application_for").show();
+            } else {
+                $("#nextBtn").prop('disabled', false);
+                $("#application_for").hide();
+            }
         }
     </script>
 
